@@ -11,7 +11,7 @@ import RecipeDetails from './pages/RecipeDetails';
 const getAllRecipes = async () => {
   let allRecipes = [];
   try {
-    const res = await axios.get("http://localhost:5000/recipe");
+    const res = await axios.get("https://recipe-heaven.onrender.com/recipe");
     allRecipes = res.data;
   } catch (err) {
     console.error("Error fetching all recipes:", err);
