@@ -22,7 +22,7 @@ const Recipeitems = () => {
 
   const onDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/recipe/${id}`);
+      await axios.delete(`https://recipe-heaven.onrender.com/recipe/${id}`);
       setAllRecipes(prev => prev.filter(recipe => recipe._id !== id));
 
       const updatedFavs = favItems.filter(recipe => recipe._id !== id);
