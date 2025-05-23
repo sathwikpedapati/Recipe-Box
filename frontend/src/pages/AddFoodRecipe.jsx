@@ -42,7 +42,7 @@ const AddFoodRecipe = () => {
   formData.append("coverImage", recipeData.file); 
 
   try {
-    await axios.post("http://localhost:5000/recipe", formData, {
+    await axios.post("https://recipe-heaven.onrender.com/recipe", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
         "Authorization": "Bearer " + localStorage.getItem("token")
