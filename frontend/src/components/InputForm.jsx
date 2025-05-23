@@ -9,7 +9,7 @@ const InputForm = ({setIsOpen}) => {
     const handleOnsubmit=async(e)=>{
         e.preventDefault();
         let endpoint=(isSignuup)?"signup":"login"
-        await axios.post(`http://localhost:5000/${endpoint}`,{email,password})
+        await axios.post(`https://recipe-heaven.onrender.com/${endpoint}`,{email,password})
         .then((res)=>{
             localStorage.setItem("token",res.data.token);
             localStorage.setItem("user",JSON.stringify(res.data.user));
